@@ -1,1 +1,41 @@
+/* john é True */
+john.
 
+/* Predicado, poder ter quantos parametros quiser, nessa caso o primeiro gosta de comer o segundo */
+gostaDeComer(lucas,pizza).
+gostaDeComer(dimitri,hamburger).
+gostaDeComer(eduardo, castroAlves).
+
+/* menor(babuino, girafa).
+menor(camelo, elefante).
+menor(girafa, baleia). */
+
+/*Regra lógica baseada em lógica de prendicados */
+/* menor(X, Z) :- menor(X, Y), menor(Y, Z). */
+
+tamanho(babuino, 120).
+tamanho(girafa, 420).
+tamanho(baleia, 800).
+tamanho(ratazana, 3).
+
+maior(X, Y) :- tamanho(X,Z), tamanho(Y,Q), Z>Q.
+menor(X, Y) :- maior(Y, X).
+
+/* lista [1,2,3] */
+
+teste( [X | _ ], x).
+
+ultimo([X], X).
+ultimo([_ | T], X) :- ultimo(T, X).
+
+menor([X], X).
+menor([H | T], H) :- menor(T, X), H < X.
+menor([H | T], X) :- menor(T, X), X < H.
+
+male(igor).
+male(sandro).
+female(gatinha).
+parent(sandro, igor).
+parent(cris, igor).
+parent(ciro, sandro).
+parent(rose, sandro).
