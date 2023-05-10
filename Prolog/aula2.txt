@@ -1,0 +1,6 @@
+vizinho(azul, vermelho).
+vizinho(vermelho, azul).
+
+/* Rode as duas proxímas linhas como query */
+/* vizinho(A,B), vizinho(A,C), vizinho(B,D), vizinho(C,D) */
+/* vizinho(A,B), vizinho(A,C), vizinho(B,D), vizinho(C,D), vizinho(A,D) */
