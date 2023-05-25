@@ -1,0 +1,9 @@
+estado(sp,'sao paulo").
+estado(rj,'rio de janeiro').
+estado(es, 'espirito santo').
+estado(mg, 'minas gerais').
+
+capital(sao_paulo,sp).
+capital(rio_de_janeiro,rj).
+capital(vitoria,es).
+capital(belo_horizonte,mg).
