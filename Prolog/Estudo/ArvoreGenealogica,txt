@@ -15,4 +15,4 @@ pai(X,Y) :- parent(X,Y).
 filho(X,Y) :- parent(Y,X).
 irmao(X,Y) :- parent(Z,X),parent(Z,Y).
 avo(X,Y) :- parent(X,Z),parent(Z,Y).
-primo(X,Y) :- avo(Z,X),avo(Z,Y).
+primo(X,Y) :- avo(Z,X),avo(Z,Y),parent(P,X),\+parent(P,Y).
