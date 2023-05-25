@@ -13,3 +13,9 @@ genitor(tom,liz).
 genitor(bob,ann).
 genitor(bob,pat).
 genitor(pat,jim).
+
+prole(X,Y) :- genitor(Y,X).
+filho(X,Y) :- genitor(Y,X) , homem(X).
+filha(X,Y) :- genitor(Y,X) , mulher(X).
+mae(X,Y) :- genitor(X,Y), mulher(X).
+avos(X,Z) :- genitor(X,Y),genitor(Y,Z).
