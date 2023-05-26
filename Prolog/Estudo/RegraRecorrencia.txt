@@ -1,0 +1,5 @@
+regraRecorrencia(1,2).
+regraRecorrencia(X,R) :- X > 1,
+    					Y is X - 1,
+    					regraRecorrencia(Y,Z),
+    					R is Z-(3*(X^2)).
