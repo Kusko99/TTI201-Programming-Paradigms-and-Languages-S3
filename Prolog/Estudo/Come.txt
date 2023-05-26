@@ -21,3 +21,6 @@ come(raposa,coelho).
 come(coelho,grama).
 come(veado,grama).
 come(urso,guaxinim).
+
+pertence_cadeia(X,Y) :- come(Y,X).
+pertence_cadeia(X,Y) :- come(Y,Z),pertence_cadeia(X,Z).
