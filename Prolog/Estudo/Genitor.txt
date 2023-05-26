@@ -19,3 +19,10 @@ filho(X,Y) :- genitor(Y,X) , homem(X).
 filha(X,Y) :- genitor(Y,X) , mulher(X).
 mae(X,Y) :- genitor(X,Y), mulher(X).
 avos(X,Z) :- genitor(X,Y),genitor(Y,Z).
+
+%descendente(X,Y) :- genitor(X,Y).
+%descendente(X,Y) :- genitor(Y,Z),genitor(Z,X).
+%descendente(X,Y) :- genitor(Y,Z),genitor(Z,X),genitor(W,X).
+
+descendente(X,Y) :- genitor(Y,X).
+descendente(X,Y) :- genitor(Y,W),descendente(X,W).
