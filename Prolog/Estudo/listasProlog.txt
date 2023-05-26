@@ -1,0 +1,28 @@
+pertence(X,[X|_]).
+pertence(X,[_|T]) :- pertence(X,T).
+
+eh_ultimo(X,[X]).
+eh_ultimo(X,[_|T]) :- eh_ultimo(X,T).
+
+consecutivos(X,Y[X,Y|_]).
+consecutivos(X,Y,[_|T]) :- consecutivos(X,Y,T).
+
+tamanho([],0).
+tamanho([_|T],Tam) :- tamanho(T,Tam1),
+    				  Tam is 1 + Tam1.
+
+prefixo([],_).
+prefixo([H1|T1],[H2|T2]) :- H1 = H2, prefixo(T1,T2).
+
+sufixo(L,L).
+sufixo(L1,[_|T]) :- sufixo(L1,T).
+
+todos_pares([],[]).
+todos_pares([H|T],S) :- todos_pares(T,T1),
+    		(   ( H mod 2) =:= 0 ->  S = [H|T1]; S = T1).
+
+todos_a([]).
+todos_a([H|T]) :- H = a, todos_a(T).
+
+contem1([1]).
+contem1([H|T]) :- ( H = 1, !); contem1(T).
