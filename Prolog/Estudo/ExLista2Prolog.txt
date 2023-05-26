@@ -1,0 +1,20 @@
+soma(X,Y,Result) :- Result is X + Y.
+
+tamanho([],0).
+tamanho([_|T],Tam) :- tamanho(T,Tam1),
+    				  Tam is 1 + Tam1.
+
+soma_elementos([],0).
+soma_elementos([H|T],Soma) :- soma_elementos(T,Soma1),
+    						Soma is H + Soma1.
+
+fibas(0,0).
+fibas(1,1).
+
+fibas(N, F) :-
+        N > 1,
+        N1 is N-1,
+        N2 is N-2,
+        fibas(N1, F1),
+        fibas(N2, F2),
+        F is F1+F2.
